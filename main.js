@@ -6,20 +6,46 @@ function showPage(pageId) {
     pages.forEach(p => p.classList.toggle('active', p.dataset.page === pageId));
     navItems.forEach(n => n.classList.toggle('active', n.dataset.page === pageId));
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    closeMobileMenu();
 }
 
 navItems.forEach(btn => {
-    btn.addEventListener('click', () => {
-        showPage(btn.dataset.page);
-        document.getElementById('sidebar')?.classList.remove('open');
-    });
+    btn.addEventListener('click', () => showPage(btn.dataset.page));
 });
 
-// ── Mobile menu ──
+// ── Mobile menu + overlay ──
 const menuToggle = document.getElementById('menuToggle');
 const sidebar = document.getElementById('sidebar');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
 
-menuToggle?.addEventListener('click', () => sidebar?.classList.toggle('open'));
+function openMobileMenu() {
+    sidebar?.classList.add('open');
+    sidebarOverlay?.classList.add('active');
+    document.body.classList.add('menu-open');
+    menuToggle?.setAttribute('aria-expanded', 'true');
+    menuToggle?.setAttribute('aria-label', 'Đóng menu');
+}
+
+function closeMobileMenu() {
+    sidebar?.classList.remove('open');
+    sidebarOverlay?.classList.remove('active');
+    document.body.classList.remove('menu-open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', 'Mở menu');
+}
+
+function toggleMobileMenu() {
+    if (sidebar?.classList.contains('open')) closeMobileMenu();
+    else openMobileMenu();
+}
+
+menuToggle?.addEventListener('click', toggleMobileMenu);
+sidebarOverlay?.addEventListener('click', closeMobileMenu);
+
+// Đóng menu khi resize lên desktop
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeMobileMenu();
+});
 
 // ── Typing animation (trang giới thiệu) ──
 const roles = [
