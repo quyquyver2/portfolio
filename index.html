@@ -2,7 +2,12 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Portfolio cá nhân - Nhập môn Công nghệ số">
     <title>Portfolio | Nhập môn Công nghệ số</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,9 +43,13 @@
         </div>
     </aside>
 
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
     <header class="mobile-header">
         <span class="mobile-logo">Portfolio NMCNS</span>
-        <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
     </header>
 
     <div class="main-wrapper">
@@ -143,10 +152,16 @@
                                 <h3><i class="fa-solid fa-route"></i> Quá trình</h3>
                                 <p>Nghiên cứu tài liệu, khảo sát thiết bị thực tế, ghi chú và tổng hợp thành báo cáo có hình ảnh minh họa.</p>
                             </div>
-                            <div class="project-col project-col-file">
-                                <h3><i class="fa-solid fa-file-arrow-up"></i> Sản phẩm</h3>
-                                <div class="file-drop">Chèn PDF / ảnh / link video</div>
-                            </div>
+                        </div>
+                        <div class="project-product">
+                            <a href="https://docs.google.com/document/d/1cvq4vhid29jhvo1EoMFd8D96iY1hpXSz/edit" target="_blank" rel="noopener noreferrer" class="btn-view-product">
+                                <span class="btn-view-icon"><i class="fa-solid fa-file-lines"></i></span>
+                                <span class="btn-view-text">
+                                    <strong>Xem sản phẩm</strong>
+                                    <small>Google Docs · Bài 1</small>
+                                </span>
+                                <span class="btn-view-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </a>
                         </div>
                     </article>
 
@@ -168,10 +183,16 @@
                                 <h3><i class="fa-solid fa-route"></i> Quá trình</h3>
                                 <p>Chọn chủ đề, áp dụng <code>site:</code>, <code>filetype:</code>, <code>intitle:</code>…, chụp màn hình và phân tích nguồn tin.</p>
                             </div>
-                            <div class="project-col project-col-file">
-                                <h3><i class="fa-solid fa-file-arrow-up"></i> Sản phẩm</h3>
-                                <div class="file-drop">Chèn ảnh kết quả tìm kiếm hoặc link báo cáo</div>
-                            </div>
+                        </div>
+                        <div class="project-product">
+                            <a href="https://docs.google.com/document/d/193NMYZlby4S3DopG-skM5eLNLd_YwV0t/edit" target="_blank" rel="noopener noreferrer" class="btn-view-product">
+                                <span class="btn-view-icon"><i class="fa-solid fa-file-lines"></i></span>
+                                <span class="btn-view-text">
+                                    <strong>Xem sản phẩm</strong>
+                                    <small>Google Docs · Bài 2</small>
+                                </span>
+                                <span class="btn-view-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </a>
                         </div>
                     </article>
 
@@ -193,10 +214,16 @@
                                 <h3><i class="fa-solid fa-route"></i> Quá trình</h3>
                                 <p>Viết prompt ban đầu, cải tiến với vai trò &amp; bối cảnh, so sánh kết quả và giải thích sự khác biệt.</p>
                             </div>
-                            <div class="project-col project-col-file">
-                                <h3><i class="fa-solid fa-file-arrow-up"></i> Sản phẩm</h3>
-                                <div class="file-drop">Chèn ảnh prompt + kết quả AI hoặc PDF</div>
-                            </div>
+                        </div>
+                        <div class="project-product">
+                            <a href="https://docs.google.com/document/d/1HmcMM_nB9JJDVxpbjv1QZzfv-6jb3U_w/edit" target="_blank" rel="noopener noreferrer" class="btn-view-product">
+                                <span class="btn-view-icon"><i class="fa-solid fa-file-lines"></i></span>
+                                <span class="btn-view-text">
+                                    <strong>Xem sản phẩm</strong>
+                                    <small>Google Docs · Bài 3</small>
+                                </span>
+                                <span class="btn-view-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </a>
                         </div>
                     </article>
 
@@ -218,10 +245,16 @@
                                 <h3><i class="fa-solid fa-route"></i> Quá trình</h3>
                                 <p>Dùng Trello / Notion / Google Tasks — tạo board, phân công việc, cập nhật tiến độ và họp nhóm online.</p>
                             </div>
-                            <div class="project-col project-col-file">
-                                <h3><i class="fa-solid fa-file-arrow-up"></i> Sản phẩm</h3>
-                                <div class="file-drop">Chèn ảnh board công việc hoặc link chia sẻ</div>
-                            </div>
+                        </div>
+                        <div class="project-product">
+                            <a href="https://docs.google.com/document/d/1z-IcVmrIxtUgM4EQlbAxVs3ML_K5ni3Q/edit" target="_blank" rel="noopener noreferrer" class="btn-view-product">
+                                <span class="btn-view-icon"><i class="fa-solid fa-file-lines"></i></span>
+                                <span class="btn-view-text">
+                                    <strong>Xem sản phẩm</strong>
+                                    <small>Google Docs · Bài 4</small>
+                                </span>
+                                <span class="btn-view-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </a>
                         </div>
                     </article>
 
@@ -243,10 +276,16 @@
                                 <h3><i class="fa-solid fa-route"></i> Quá trình</h3>
                                 <p>Lên ý tưởng → viết prompt → tạo nội dung bằng AI → chỉnh sửa và hoàn thiện sản phẩm.</p>
                             </div>
-                            <div class="project-col project-col-file">
-                                <h3><i class="fa-solid fa-file-arrow-up"></i> Sản phẩm</h3>
-                                <div class="file-drop">Chèn ảnh / link video / file sản phẩm</div>
-                            </div>
+                        </div>
+                        <div class="project-product">
+                            <a href="https://docs.google.com/document/d/1FX3rxQuM_sv-LbPVNytz3xSpS_WaUtFz/edit" target="_blank" rel="noopener noreferrer" class="btn-view-product">
+                                <span class="btn-view-icon"><i class="fa-solid fa-file-lines"></i></span>
+                                <span class="btn-view-text">
+                                    <strong>Xem sản phẩm</strong>
+                                    <small>Google Docs · Bài 5</small>
+                                </span>
+                                <span class="btn-view-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </a>
                         </div>
                     </article>
 
@@ -268,10 +307,16 @@
                                 <h3><i class="fa-solid fa-route"></i> Quá trình</h3>
                                 <p>Nghiên cứu đạo đức AI, liên hệ chính sách trường, liệt kê 5–7 nguyên tắc và đề xuất giải pháp.</p>
                             </div>
-                            <div class="project-col project-col-file">
-                                <h3><i class="fa-solid fa-file-arrow-up"></i> Sản phẩm</h3>
-                                <div class="file-drop">Chèn PDF nguyên tắc hoặc ảnh minh họa</div>
-                            </div>
+                        </div>
+                        <div class="project-product">
+                            <a href="https://drive.google.com/file/d/1qlVgVXlW5oMilsFyako4UZTl2qFEcI8k/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-view-product">
+                                <span class="btn-view-icon"><i class="fa-solid fa-image"></i></span>
+                                <span class="btn-view-text">
+                                    <strong>Xem sản phẩm</strong>
+                                    <small>Infographic · Google Drive · Bài 6</small>
+                                </span>
+                                <span class="btn-view-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </a>
                         </div>
                     </article>
 
